@@ -8,6 +8,8 @@ $purple: #ffb3ff;
 $red: #f00;
 $green: #4caf50;
 $white: #fff;
+$lightpurple: #eac5e2;
+$darkblue: #222;
 
 input {
   border: 2px solid $red;
@@ -15,7 +17,7 @@ input {
   box-sizing: border-box;
   margin: 8px 0;
   padding: 12px 20px;
-  width: 15%;
+  width: 50%;
 }
 
 button {
@@ -30,12 +32,46 @@ button {
   text-decoration: none;
 }
 
-.board {
-  display: inline-grid;
+.main-content {
+  background: $lightpurple;
   float: left;
-  grid-template-columns: auto auto auto;
-  padding: 10px;
+  width: 30%;
 }
+
+.aside {
+  float: left;
+  width: 70%;
+}
+
+.wrapper,
+html,
+body {
+  height: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 60%;
+}
+
+td {
+  border: 6px solid $darkblue;
+  width: 33.333%;
+}
+
+td::after {
+  content: '';
+  display: block;
+  margin-top: 60%;
+}
+// .board {
+//   display: inline-grid;
+//   float: left;
+//   grid-template-columns: auto auto auto;
+//   height: 70%;
+//   padding: 10px;
+//   width: 60%;
+// }
 
 .tic-piece {
   background-color: $blue;
