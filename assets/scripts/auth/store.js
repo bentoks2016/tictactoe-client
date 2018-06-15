@@ -1,6 +1,6 @@
 const store = {
   user: {
-token: ()
+    // token: ()
   }
 }
 
