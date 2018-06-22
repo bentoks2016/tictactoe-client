@@ -62,13 +62,11 @@ const switchPlayer = function (event) {
     if (event.target.innerHTML === '') {
       if (currentPlayer === 'X') {
         board[event.target.id] = 'X'
-        console.log('this entered ', board)
         event.target.innerHTML = 'X'
 
         currentPlayer = 'O'
       } else {
         board[event.target.id] = 'O'
-        console.log('this entered ', board)
         event.target.innerHTML = 'O'
 
         currentPlayer = 'X'
@@ -76,26 +74,152 @@ const switchPlayer = function (event) {
     }
   }
 }
-
-const onClick = function () {
-  if ($('#s1').text() && $('#s2').text() && $('#s3').text() === 'X') {
-    console.log('player X wins')
-    $('.message').text('Player X wins')
-    gameOver = true
-  } else if ($('#s1').text() && $('#s2').text() && $('#s3').text() === 'O') {
-    console.log('player O wins')
-    $('.message').text('Player O wins')
-  } else if ($('#s4').text() && $('#s5').text() && $('#s6').text() === 'X') {
-    $('.message').text('Player X wins')
-  } else if ($('#s4').text() && $('#s5').text() && $('#s6').text() === '0') {
-    $('.message').text('Player O wins')
-  } else if ($('#s7').text() && $('#s8').text() && $('#s9').text() === 'X') {
-    $('.message').text('Player X wins')
-  } else if ($('#s7').text() && $('#s8').text() && $('#s9').text() === 'O') {
-    $('.message').text('Player O wins')
-  } else { console.log('no one wins') }
+const gameTie = function () {
+  if ($('#s1').text() &&
+    $('#s2').text() &&
+    $('#s3').text() &&
+    $('#s4').text() &&
+    $('#s5').text() &&
+    $('#s6').text() &&
+    $('#s7').text() &&
+    $('#s8').text() &&
+    $('#s9').text() === true) {
+    console.log('Game is a draw')
+    return true
+  }
 }
 
+const onClick = function () {
+  if ($('#s1').text() === 'X' &&
+    $('#s2').text() === 'X' &&
+    $('#s3').text() === 'X') {
+    $('.message').text('Player X wins')
+    gameOver = true
+  } else if // (($('#s1').text() && $('#s2').text() && $('#s3').text()) === 'O') {
+  // $('.message').text('Player O wins')
+  // gameOver = true
+  ($('#s1').text() === 'O' &&
+    $('#s2').text() === 'O' &&
+    $('#s3').text() === 'O') {
+    $('.message').text('Player O wins')
+    gameOver = true
+  } else if // (($('#s4').text() && $('#s5').text() && $('#s6').text()) === 'X') {
+  // $('.message').text('Player X wins')
+  // gameOver = true
+  ($('#s4').text() === 'X' &&
+    $('#s5').text() === 'X' &&
+    $('#s6').text() === 'X') {
+    $('.message').text('Player X wins')
+    gameOver = true
+  } else if // (($('#s4').text() && $('#s5').text() && $('#s6').text()) === '0') {
+  // $('.message').text('Player O wins')
+  // gameOver = true
+  ($('#s4').text() === 'O' &&
+    $('#s5').text() === 'O' &&
+    $('#s6').text() === 'O') {
+    $('.message').text('Player O wins')
+    gameOver = true
+  } else if // (($('#s7').text() && $('#s8').text() && $('#s9').text()) === 'X') {
+  // $('.message').text('Player X wins')
+  // gameOver = true
+  ($('#s7').text() === 'X' &&
+    $('#s8').text() === 'X' &&
+    $('#s9').text() === 'X') {
+    $('.message').text('Player X wins')
+    gameOver = true
+  } else if // (($('#s7').text() && $('#s8').text() && $('#s9').text()) === 'O') {
+  // $('.message').text('Player O wins')
+  // gameOver = true
+  ($('#s7').text() === 'O' &&
+    $('#s8').text() === 'O' &&
+    $('#s9').text() === 'O') {
+    $('.message').text('Player O wins')
+    gameOver = true
+  } else if // (($('#s1').text() && $('#s4').text() && $('#s7').text()) === 'X') {
+  // $('.message').text('Player X wins')
+  // gameOver = true
+  ($('#s1').text() === 'X' &&
+    $('#s4').text() === 'X' &&
+    $('#s7').text() === 'X') {
+    $('.message').text('Player X wins')
+    gameOver = true
+  } else if // (($('#s1').text() && $('#s4').text() && $('#s7').text()) === '0') {
+  // $('.message').text('Player O wins')
+  // gameOver = true
+  ($('#s1').text() === 'O' &&
+    $('#s4').text() === 'O' &&
+    $('#s7').text() === 'O') {
+    $('.message').text('Player O wins')
+    gameOver = true
+  } else if // (($('#s2').text() && $('#s5').text() && $('#s8').text()) === 'X') {
+  // $('.message').text('Player X wins')
+  // gameOver = true
+  ($('#s2').text() === 'X' &&
+    $('#s5').text() === 'X' &&
+    $('#s8').text() === 'X') {
+    $('.message').text('Player X wins')
+    gameOver = true
+  } else if // (($('#s2').text() && $('#s5').text() && $('#s8').text()) === '0') {
+  // $('.message').text('Player O wins')
+  // gameOver = true
+  ($('#s2').text() === 'O' &&
+    $('#s5').text() === 'O' &&
+    $('#s8').text() === 'O') {
+    $('.message').text('Player O wins')
+    gameOver = true
+  } else if // (($('#s3').text() && $('#s6').text() && $('#s9').text()) === 'X') {
+  // $('.message').text('Player X wins')
+  // gameOver = true
+  ($('#s3').text() === 'X' &&
+    $('#s6').text() === 'X' &&
+    $('#s9').text() === 'X') {
+    $('.message').text('Player X wins')
+    gameOver = true
+  } else if // (($('#s3').text() && $('#s6').text() && $('#s9').text()) === '0') {
+  // $('.message').text('Player O wins')
+  // gameOver = true
+  ($('#s3').text() === 'O' &&
+    $('#s6').text() === 'O' &&
+    $('#s9').text() === 'O') {
+    $('.message').text('Player O wins')
+    gameOver = true
+  } else if // (($('#s7').text() && $('#s5').text() && $('#s3').text()) === 'X') {
+  // $('.message').text('Player X wins')
+  // gameOver = true
+  ($('#s7').text() === 'X' &&
+    $('#s5').text() === 'X' &&
+    $('#s3').text() === 'X') {
+    $('.message').text('Player X wins')
+    gameOver = true
+  } else if // (($('#s7').text() && $('#s5').text() && $('#s3').text()) === '0') {
+  // $('.message').text('Player O wins')
+  // gameOver = true
+  ($('#s7').text() === 'O' &&
+    $('#s5').text() === 'O' &&
+    $('#s3').text() === 'O') {
+    $('.message').text('Player O wins')
+    gameOver = true
+  } else if // (($('#s1').text() && $('#s5').text() && $('#s8').text()) === 'X') {
+  // $('.message').text('Player X wins')
+  // gameOver = true
+  ($('#s1').text() === 'X' &&
+    $('#s5').text() === 'X' &&
+    $('#s8').text() === 'X') {
+    $('.message').text('Player X wins')
+    gameOver = true
+  } else if // (($('#s1').text() && $('#s5').text() && $('#s8').text()) === '0') {
+  // $('.message').text('Player O wins')
+  // gameOver = true
+  ($('#s1').text() === 'O' &&
+    $('#s5').text() === 'O' &&
+    $('#s8').text() === 'O') {
+    $('.message').text('Player O wins')
+    gameOver = true
+  } else if (gameTie() === true) {
+    $('.message').text('This game is a draw')
+    console.log('this is game tie')
+  }
+}
 module.exports = {
   onSignUp: onSignUp,
   onSignIn: onSignIn,

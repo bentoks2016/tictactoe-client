@@ -1,4 +1,4 @@
-const store = require('./store.js')
+const store = require('../store.js')
 
 const signUp = function (data) {
   return $.ajax({
@@ -17,6 +17,7 @@ const signIn = function (data) {
 }
 
 const signOut = function (event) {
+  console.log('this is to check for sign out & store', store)
   return $.ajax({
     method: 'DELETE',
     url: 'https://wdi-library-api.herokuapp.com/sign-out',
