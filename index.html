@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>TIC TAC TOE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="main-content">
+      <h1>Game registration</h1>
+      <h3>User Sign Up </h3>
+      <div id="formSignUp">
+
+        <form id="signUpForm">
+          <input name="credentials[email]" type="text" value=" "><br>
+          <input name="credentials[password]" type="password" value=""><br>
+          <input name="credentials[password_confirmation]" type="password" value=""><br>
+          <button type="submit"> Sign Up</button>
+        </form>
+
+
+        <h3>Please sign In </h3>
+
+        <form id="signInForm">
+          <input name="credentials[email]" type="text" value=" "><br>
+          <input name="credentials[password]" type="password" value=""><br>
+          <button type="submit"> Sign In</button>
+        </form>
+      </div>
+
+      <h3> Password change </h3>
+      <form id="password_change">
+        <input type="text" name="passwords[old]" placeholder="Old Password"><br>
+        <input type="text" name="passwords[new]" placeholder="New Password"><br>
+        <button type="submit"> Submit</button>
+      </form>
+      <button id="sign-out" type="submit"> Sign Out</button>
+
+    </div>
+
+    <div class="aside">
+      <h2> Please Select Player</h2>
+      <div class="radio">
+        <label><input type="radio" name="optradio" id="playx">Player X</label>
+      </div>
+      <div class="radio">
+        <label><input type="radio" name="optradio" id="playo">Player O</label>
+      </div>
+
+
+      <h2>Game Board</h2>
+      <div class="message"></div>
+
+      <table id="board">
+<tr>
+<td id="s1" class="tic-piece"></td>
+<td id="s2" class="tic-piece"></td>
+<td id="s3" class="tic-piece"></td>
+  </tr>
+<tr>
+<td id="s4" class="tic-piece"></td>
+<td id="s5" class="tic-piece"></td>
+<td id="s6" class="tic-piece"></td>
+  </tr>
+<tr>
+<td id="s7" class="tic-piece"></td>
+<td id="s8" class="tic-piece"></td>
+<td id="s9" class="tic-piece"></td>
+  </tr>
+</table>
+      <button id="gameRestart">Restart game</button>
+    </div>
+  </div>
+</body>
+
+</html>
